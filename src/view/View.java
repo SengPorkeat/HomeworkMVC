@@ -16,7 +16,7 @@ public class View {
             System.out.println("3.Remove user");
             System.out.println("4.Exit");
             System.out.println("==================");
-            System.out.println("Option: ");
+            System.out.print("Option: ");
             int op = new Scanner(System.in).nextInt();
             switch(op){
                 case 1->{
@@ -25,14 +25,14 @@ public class View {
                 }
                 case 2->{
                     int id = userController.getAllUsers().size() + 1;
-                    System.out.println("Name: ");
+                    System.out.print("Name: ");
                     String name = new Scanner(System.in).nextLine();
-                    System.out.println("Email: ");
+                    System.out.print("Email: ");
                     String email = new Scanner(System.in).nextLine();
                     userController.addNewUser(new User(id, name, email));
                 }
                 case 3->{
-                    System.out.println("Remove by ID: ");
+                    System.out.print("Remove by ID: ");
                     int id = new Scanner(System.in).nextInt();
                     userController.deleteUser(id);
                 }
